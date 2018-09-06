@@ -1,0 +1,33 @@
+.home_header {
+   background-image: url('/src/assets/home-img/background_CYS.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   height: 80%;
+}
+
+.button_main {
+    display: table;
+    width : 100%;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+.start_link {
+    background-color: #4CAF50;
+    color: white;
+    margin: 1em;
+}
+
+p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 4em;
+    margin-left: 4em;
+}
+
+.hook {
+    font-weight: bold;
+}

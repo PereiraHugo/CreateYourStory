@@ -12,10 +12,12 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { HomeComponent } from './home/home.component';
 import { AlphabeticalRuleComponent } from './alphabetical-rule/alphabetical-rule.component';
+import { CategoryRuleComponent } from './category-rule/category-rule.component';
 
 const routes : Routes = [
   { path: '', component : HomeComponent }, //http://localhost:4200
-  { path: 'AB_rule', component : AlphabeticalRuleComponent } //http://localhost:4200/AB_rule
+  { path: 'AB_rule', component : AlphabeticalRuleComponent }, //http://localhost:4200/AB_rule
+  { path: 'Cat_rule', component : CategoryRuleComponent } //http://localhost:4200/Cat_rule
 ];
 
 
@@ -25,7 +27,8 @@ const routes : Routes = [
     UserComponent,
     MainNavComponent,
     HomeComponent,
-    AlphabeticalRuleComponent
+    AlphabeticalRuleComponent,
+    CategoryRuleComponent
   ],
   imports: [
     BrowserModule,
