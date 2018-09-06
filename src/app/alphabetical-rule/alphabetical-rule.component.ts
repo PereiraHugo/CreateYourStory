@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './alphabetical-rule.component.html',
   styleUrls: ['./alphabetical-rule.component.css']
 })
-export class AlphabeticalRuleComponent implements OnInit {
 
+export class AlphabeticalRuleComponent implements OnInit {
+  alphabet: string[]= [];
+  selectedValue: string;
+  value = 'Clear me';
   constructor() { }
 
   ngOnInit() {
+    this.alphabet=  ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   }
 
 }

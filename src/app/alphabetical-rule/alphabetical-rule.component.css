@@ -1,6 +1,33 @@
 .alphabetic_header {
+    background-image: url('/src/assets/alphabet-img/alphabet_CYS.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     height: 40%;
+}
+
+.alphabetic_form {
+    margin : 2em;
+    display: inline-block;
+}
+
+table tr td {
+    padding: 2em;
+}
+
+.div_form {
+    text-align: center;
+}
+
+.add_line_form {
+    background-color: #784421;
+}
+
+.get_words {
+    background-color: #4CAF50;
+    color: white;
+    font: 25px bold;
+    margin: 1em;
+    position: absolute;
+    right: 15%;
 }
