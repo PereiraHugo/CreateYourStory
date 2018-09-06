@@ -1,3 +1,24 @@
-<p>
-  category-rule works!
-</p>
+<div class="category_header">
+</div>
+<div class="div_form">
+  <form class="category_form">
+    <table class="table_form">
+      <tr>
+        <td></td>
+        <td>
+          <mat-form-field>
+            <mat-select placeholder="Choose a Category">
+              <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <input matInput type="number" placeholder="How Many Words?" min=0>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<button mat-raised-button class="get_words">Get Your Words !</button>

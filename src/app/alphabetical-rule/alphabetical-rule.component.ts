@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class AlphabeticalRuleComponent implements OnInit {
   alphabet: string[]= [];
-  selectedValue: string;
-  value = 'Clear me';
+  
   constructor() { }
 
   ngOnInit() {
