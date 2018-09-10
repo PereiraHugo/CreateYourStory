@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AlphabeticalRuleComponent } from './alphabetical-rule/alphabetical-rule.component';
 import { CategoryRuleComponent } from './category-rule/category-rule.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DataTableComponent } from './data-table/data-table.component';
 
 const routes : Routes = [
   { path: '', component : HomeComponent }, //http://localhost:4200
@@ -27,7 +28,8 @@ const routes : Routes = [
     MainNavComponent,
     HomeComponent,
     AlphabeticalRuleComponent,
-    CategoryRuleComponent    
+    CategoryRuleComponent,
+    DataTableComponent    
   ],
   imports: [
     BrowserModule,
