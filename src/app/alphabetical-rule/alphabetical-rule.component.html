@@ -4,7 +4,9 @@
   <form class="alphabetic_form">
     <table class="table_form">
       <tr>
-        <td></td>
+        <td>
+          <button mat-mini-fab class="add_line_table">+</button>
+        </td>
         <td>
           <mat-form-field>
             <mat-select placeholder="Choose a Letter">
@@ -18,36 +20,40 @@
           </mat-form-field>
         </td>
       </tr>
-      <!--
-      <tr>
-        <td>
-          <button mat-mini-fab class="add_line_form">+</button>
-        </td>
-      </tr>
-      -->
     </table>
   </form>
 </div>
-<button mat-raised-button class="get_words">Get Your Words !</button>
-<!--
-<script type="text/ng-template" id="row_form">
-  <td></td>
-  <td>
-    <mat-form-field>
-      <mat-select placeholder="Choose a Letter">
-        <mat-option *ngFor="let letter of alphabet" [value]="letter">{{ letter }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </td>
-  <td>
-    <mat-form-field>
-      <input matInput type="number" placeholder="How Many Words?" min=0>
-    </mat-form-field>
-  </td>
-</tr>
-<tr>
-  <td>
-    <button mat-mini-fab class="add_line_form">+</button>
-  </td>
-</script>
--->
+
+<div class="mat-elevation-z8">
+  <table>
+    <!-- Letters Column -->
+    <ng-container matColumnDef="letter">
+      <th mat-header-cell *matHeaderCellDef> Letters </th>
+      <td mat-cell *matCellDef="let letter"> {{ resultForm.letter }} </td>
+    </ng-container>
+
+    <!-- Counts Column -->
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef> Numbers </th>
+      <td mat-cell *matCellDef="let number"> {{ resultForm.count }} </td>
+      <td mat-footer-cell *matFooterCellDef> {{ totalCount }} </td>
+    </ng-container>
+
+    <!-- Counts Column -->
+    <ng-container matColumnDef="remove">
+      <th mat-header-cell *matHeaderCellDef> Remove </th>
+      <td mat-cell *matCellDef="let number"> <button mat-mini-fab class="add_line_table">-</button> </td>
+    </ng-container>
+  </table>
+</div>
+<div>
+  <button mat-raised-button class="get_words">Get Your Words !</button>
+</div>
+
+<div>
+  <mat-list>
+    <mat-list-item *ngFor="let list of response_api">
+      <p mat-line> {{list.word}} </p>
+    </mat-list-item>
+  </mat-list>
+</div>

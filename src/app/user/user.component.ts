@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DonneesService } from '../services/donnees.service';
+import { ApiData } from '../services/api-data.service';
 
 @Component({
   selector: 'app-user',
@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   email: string;
   hobby: hobby;
 
-  constructor(private donnees: DonneesService) {
+  constructor(private donnees: ApiData) {
     this.nom = "Pereira";
     this.age = 26;
     this.email = "pereirahugo.h@gmail.com"
