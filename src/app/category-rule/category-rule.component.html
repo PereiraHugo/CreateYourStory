@@ -9,7 +9,7 @@
         </td>
         <td>
           <mat-form-field>
-            <mat-select placeholder="Choose a Category" (selectionChange)="getLetter($event.value)">
+            <mat-select placeholder="Choose a Category" (selectionChange)="getCategory($event.value)">
               <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
             </mat-select>
           </mat-form-field>
@@ -23,7 +23,9 @@
     </table>
   </form>
 </div>
-<button mat-raised-button class="get_words" (click)="retrieveWordsByCategory($event)">Get Your Words !</button>
+<div>
+  <button mat-raised-button class="get_words" (click)="retrieveWordsByCategory($event)">Get Your Words !</button>
+</div>
 
 <div>
   <mat-list>
