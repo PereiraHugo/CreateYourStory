@@ -21,8 +21,7 @@ export class AlphabeticalRuleComponent implements OnInit {
   constructor(private myApiData: ApiData) { }
 
   ngOnInit() {
-    this.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    console.log("Hello There")
+    this.alphabet = this.myApiData.getAlphabet();
   }
 
   public retrieveDataFromApi(event) {
@@ -37,7 +36,6 @@ export class AlphabeticalRuleComponent implements OnInit {
 
   public getLetter(event) {
     this.choseenLetter = event;
-    console.log(this.choseenLetter);
   }
 
   public getNumber(event) {

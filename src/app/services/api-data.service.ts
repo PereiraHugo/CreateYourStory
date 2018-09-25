@@ -6,7 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiData {
   api_url = "";
+  alphabet = [];
+  
   constructor(private http: HttpClient) { }
+
+  getAlphabet(){
+    this.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    return this.alphabet
+  }
 
   getData() {
     return this.http.get("http://localhost:3000/words/en")
