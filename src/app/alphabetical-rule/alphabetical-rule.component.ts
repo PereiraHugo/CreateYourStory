@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiData } from '../services/api-data.service';
+import { WordsService } from '../services/words-service.service';
 
 export interface Section {
   name: string;
@@ -18,7 +18,7 @@ export class AlphabeticalRuleComponent implements OnInit {
   choseenLetter = "";
   numberWords = 0;
 
-  constructor(private myApiData: ApiData) { }
+  constructor(private myApiData: WordsService) { }
 
   ngOnInit() {
     this.alphabet = this.myApiData.getAlphabet();
