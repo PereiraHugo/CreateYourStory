@@ -15,20 +15,20 @@ export interface Section {
 export class AlphabeticalRuleComponent implements OnInit {
   alphabet: string[] = [];
   response_api = {};
-  choseenLetter = "";
-  numberWords = 0;
+  choseenLetter : string = "";
+  numberWords : number = 0;
 
-  constructor(private myApiData: WordsService) { }
+  constructor(private myWordsService: WordsService) { }
 
   ngOnInit() {
-    this.alphabet = this.myApiData.getAlphabet();
+    this.alphabet = this.myWordsService.getAlphabet();
   }
 
-  public retrieveDataFromApi(event) {
+  public retrieveWordsByLetter(event) {
     if (this.choseenLetter == "") {
 
     } else {
-      this.myApiData.getWordsByLetters(this.choseenLetter, this.numberWords).subscribe(data => {
+      this.myWordsService.getWordsByLetters(this.choseenLetter, this.numberWords).subscribe(data => {
         this.response_api = data
       });
     }

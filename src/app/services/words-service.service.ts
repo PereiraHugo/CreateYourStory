@@ -26,13 +26,11 @@ export class WordsService {
   }
   getWordsByLetters(letter, number) {
     this.api_url = "http://localhost:3000/words/en/letters/" + letter + "?num=" + number;
-    console.log(this.api_url);
     return this.http.get(this.api_url)
   }
 
   getWordsByCategory(category, number) {
-    this.api_url = "http://localhost:3000/categories/en/letters/" + category + "?num=" + number;
-    console.log(this.api_url);
+    this.api_url = "http://localhost:3000/words/en/categories/" + category + "?num=" + number;
     return this.http.get(this.api_url)
   }
 }
