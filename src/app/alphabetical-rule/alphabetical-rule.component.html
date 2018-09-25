@@ -5,18 +5,18 @@
     <table class="table_form">
       <tr>
         <td>
-          <button mat-mini-fab class="add_line_table">+</button>
+          <!--<button mat-mini-fab class="add_line_table">+</button>-->
         </td>
         <td>
           <mat-form-field>
-            <mat-select placeholder="Choose a Letter">
+            <mat-select placeholder="Choose a Letter" (selectionChange)="getLetter($event.value)">
               <mat-option *ngFor="let letter of alphabet" [value]="letter">{{ letter }}</mat-option>
             </mat-select>
           </mat-form-field>
         </td>
         <td>
           <mat-form-field>
-            <input matInput type="number" placeholder="How Many Words?" min=0>
+            <input matInput type="number" placeholder="How Many Words?" min=0 (change)="getNumber($event.target.value)">
           </mat-form-field>
         </td>
       </tr>
@@ -47,7 +47,7 @@
   </table>
 </div>
 <div>
-  <button mat-raised-button class="get_words">Get Your Words !</button>
+  <button mat-raised-button class="get_words" (click)="retrieveDataFromApi($event)">Get Your Words !</button>
 </div>
 
 <div>
