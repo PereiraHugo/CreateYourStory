@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WordsService } from '../services/words-service.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { WordsService } from '../services/words-service.service';
 })
 export class CategoryRuleComponent implements OnInit {
   categories: string[] = [];
-  response_api = {};
+  @Input() response_api: any;
   choseenCategory: string = "";
   numberWords: number = 0;
 

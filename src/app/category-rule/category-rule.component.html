@@ -4,9 +4,9 @@
   <form class="category_form">
     <table class="table_form">
       <tr>
-        <td>
+        <!--<td>
           <button mat-mini-fab class="add_line_table">+</button>
-        </td>
+        </td>-->
         <td>
           <mat-form-field>
             <mat-select placeholder="Choose a Category" (selectionChange)="getCategory($event.value)">
@@ -27,10 +27,12 @@
   <button mat-raised-button class="get_words" (click)="retrieveWordsByCategory($event)">Get Your Words !</button>
 </div>
 
-<div>
+<div class="result_table">
   <mat-list>
     <mat-list-item *ngFor="let list of response_api">
       <p mat-line> {{list.word}} </p>
     </mat-list-item>
   </mat-list>
 </div>
+
+<div class="footer"></div>

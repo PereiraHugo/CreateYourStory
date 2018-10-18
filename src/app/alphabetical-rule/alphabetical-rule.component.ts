@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WordsService } from '../services/words-service.service';
-
-export interface Section {
-  name: string;
-  updated: Date;
-}
 
 @Component({
   selector: 'app-alphabetical-rule',
@@ -14,7 +9,7 @@ export interface Section {
 
 export class AlphabeticalRuleComponent implements OnInit {
   alphabet: string[] = [];
-  response_api = {};
+  @Input() response_api: any;
   choseenLetter : string = "";
   numberWords : number = 0;
 
