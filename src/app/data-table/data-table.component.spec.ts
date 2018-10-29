@@ -5,6 +5,7 @@ import { DataTableComponent } from './data-table.component';
 describe('DataTableComponent', () => {
   let component: DataTableComponent;
   let fixture: ComponentFixture<DataTableComponent>;
+  const dataSource = {};
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
