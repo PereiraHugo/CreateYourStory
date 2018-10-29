@@ -28,7 +28,8 @@ const routes : Routes = [
     MainNavComponent,
     HomeComponent,
     AlphabeticalRuleComponent,
-    CategoryRuleComponent
+    CategoryRuleComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
