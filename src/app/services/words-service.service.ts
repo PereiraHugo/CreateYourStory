@@ -22,15 +22,15 @@ export class WordsService {
   }
 
   getAllWords() {
-    return this.http.get("http://localhost:3000/words/en")
+    return this.http.get("http://api.pereirahugo.ovh/words/en")
   }
   getWordsByLetters(letter, number) {
-    this.api_url = "http://localhost:3000/words/en/letters/" + letter + "?num=" + number;
+    this.api_url = "http://api.pereirahugo.ovh/words/en/letters/" + letter + "?num=" + number;
     return this.http.get(this.api_url)
   }
 
   getWordsByCategory(category, number) {
-    this.api_url = "http://localhost:3000/words/en/categories/" + category + "?num=" + number;
+    this.api_url = "http://api.pereirahugo.ovh/en/categories/" + category + "?num=" + number;
     return this.http.get(this.api_url)
   }
 }
